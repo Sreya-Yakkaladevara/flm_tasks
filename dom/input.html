@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>excerise</title>
+</head>
+<body>
+    <div class="input">
+        <input type="number" id="input1" placeholder="enter number 1">
+        <input type="number" id="input2" placeholder="enter numbe 2">
+    </div>
+    <div class="btn">
+        <button onclick="add()">Add</button>
+        <button onclick="substract()">substract</button>
+        <button onclick="multiply()">multiply</button>
+        <button onclick="divide()">Divide</button>
+    </div>
+</body>
+</html>
+<script>
+ 
+   function add(){
+    let input1 = document.getElementById('input1').value;
+    let input2 = document.getElementById('input2').value;
+      if(input1 != "" && input2 != ""){
+        alert(Number(input1)+Number(input2));
+      }
+   }
+   function substract(){
+    let input1 = document.getElementById('input1').value;
+    let input2 = document.getElementById('input2').value;
+      if(input1 != "" && input2 != ""){
+        alert(Number(input1)-Number(input2));
+      }
+   }
+   function multiply(){
+    let input1 = document.getElementById('input1').value;
+    let input2 = document.getElementById('input2').value;
+      if(input1 != "" && input2 != ""){
+        alert(Number(input1)*Number(input2));
+      }
+   }
+   function divide(){
+    let input1 = document.getElementById('input1').value;
+    let input2 = document.getElementById('input2').value;
+      if(input1 != "" && input2 != ""){
+        alert(Math.floor(Number(input1)/Number(input2)));
+      }
+   }
+</script>

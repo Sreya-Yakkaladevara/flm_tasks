@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job Application</title>
+    <style>
+        nav{
+            display: flex;
+            flex-direction: column;
+        }
+        #form{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./application.html">Application</a>
+        <a href="./bookmark.html">BookMark</a>
+    </nav>
+    <h1>Enter your job details</h1>
+    <form id="form">
+        <input type="text" id="name" placeholder="Enter your name ">
+        <input type="text" id="email" placeholder="Enter your Email">
+        <select id="selectrole">
+            <option value="fsd">FSD</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+
+        </select>
+        <input type="number" id="salary" placeholder="Expected salary">
+        <input type="submit" id="submit">
+
+    </form>
+    <script>
+       document.getElementById("form").addEventListener("submit",jobsubmit);
+       let jobarr=[];
+       if (localStorage.getItem("jobList") !== null) {
+       jobarr = JSON.parse(localStorage.getItem("jobList"));
+        // JSON.parse-it is used to convert json data to object data.
+        //localStorage.getItem("jobList")--> to access data from local storage
+        } else {
+          jobarr = [];
+        }
+
+       function jobsubmit(){
+        event.preventDefault();
+        const jobobj = {
+            personName : document.getElementById("name").value,
+            personEmail : form.email.value,
+            selectedRole : form.selectrole.value,
+            personSalary : form.salary.value
+        }
+        jobarr.push(jobobj);
+        localStorage.setItem("jobList", JSON.stringify(jobarr));
+       }
+
+       window.location.href = "application.html";
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>application</title>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./application.html">Application</a>
+        <a href="./bookmark.html">BookMark</a>
+    </nav>
+    <div class="main">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Job Applied</th>
+                    <th>Salary Expected</th>
+                    <th>BookMark</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let jobarr = JSON.parse(localStorage.getItem("jobList"));
+        let bookMarkArr = JSON.parse(localStorage.getItem("bookmarks")) || [];
+        function bookMarkFun(elem) {
+    bookMarkArr.push(elem);
+    localStorage.setItem("bookmarks", JSON.stringify(bookMarkArr));
+  }
+        jobarr.forEach(element => {
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            td1.innerHTML = element.personName;
+            let td2 = document.createElement("td");
+            td2.innerHTML = element.personEmail;
+            let td3 = document.createElement("td");
+            td3.innerHTML = element.selectedRole;
+            let td4 = document.createElement("td");
+            td4.innerHTML = element.personSalary;
+            let td5 = document.createElement("td");
+            td5.innerHTML = "BookMark";
+            td5.addEventListener("click",()=>{
+                bookMarkFun(element);
+            })
+            tr.append(td1,td2,td3,td4,td5);
+            document.querySelector("tbody").append(tr);
+        });
+        
+        
+    </script>
+</body>
+</html>
