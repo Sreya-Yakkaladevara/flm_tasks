@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+<body>
+    <form id="form">
+        <label >Product name:<input type="text" id="name"></label>
+        <label >Category:<input type="text" id="category"></label>
+        <label >Image url:<input type="url" id="image" ></label>
+        <label >Price:<input type="number" id="price"></label>
+         <select id="gender">Gender
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+         </select>
+         <label>Sold <input type="text" id="sold"></label>
+
+    </form>
+    <input type="submit" id="submit">
+</body>
+<script>
+    function products(name,category,image,price,gender,sold="false"){
+         this.productname = name,
+         this.category = category,
+         this.imageurl = image,
+         this.price = price,
+         this.gender = gender,
+         this.sold = sold
+    }
+   
+    document.getElementById("submit").addEventListener("click",details);
+    function details(e){
+        e.preventDefault();
+
+         let res = new products(form.name.value,form.category.value,form.image.value,form.price.value,form.gender.value);
+         let product = JSON.parse(localStorage.getItem('products')) || [];
+
+         product.push(res);
+        localStorage.setItem("product",JSON.stringify(product));
+    }
+
+</script>
+</html>

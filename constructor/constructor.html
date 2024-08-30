@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            a:"sreya",
+            b:"ytewe",
+            c:"wddd"
+        }
+        let obj1 = Object.create(obj);
+        obj1.d = "edhgsh";
+        console.log(obj1);
+
+        function student1(firstname,lastname,age){
+           this.name = firstname,
+           this.lname = lastname,
+           this.age = age
+        }
+        let student = new student1("sreya","yakkaladevara",22);
+        student1.prototype.country = "india";
+        student1.prototype.batch = function batchs(){
+            return "flm"
+        };
+
+        console.log(student)
+        console.log(student.batch())
+    </script>
+</body>
+</html>
