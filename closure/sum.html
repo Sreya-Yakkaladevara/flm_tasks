@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum using closure</title>
+</head>
+<body>
+    <script>
+        function sum(a){
+            return function sum1(b){
+                return function sum2(c){
+                   console.log(a+b+c)
+                }
+            }
+        }
+
+        let  sum1 = sum(2);
+        let  sum2 = sum1(3);
+        let res = sum2(5);
+        console.log(res)
+    </script>
+</body>
+</html>

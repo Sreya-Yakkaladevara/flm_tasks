@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>debouncing</title>
+</head>
+<body>
+    <input type="text" id="input"/>
+</body>
+
+</html>
+<script>
+    function debounce(func,delay){
+        let id ;
+        return function(arg){
+            clearTimeout(id);
+            id = setTimeout(()=>{
+               func(arg)
+            },delay)
+        }
+    }
+    function fetchdata(query){
+        console.log(`${query}`)
+    }
+    let debouncedata = debounce(fetchdata,5000);
+    let input = document.getElementById("input");
+    input.addEventListener("keyup",searchData);
+    function searchData(e){
+        let query = e.target.value;
+        debouncedata(query);
+    }
+
+</script>

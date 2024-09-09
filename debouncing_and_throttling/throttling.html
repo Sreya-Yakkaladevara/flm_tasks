@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>throttle</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <script>
+
+        function throttle(func,delay){
+            let prevtime = 0;
+            return function(arg){
+                let time = new Date().getTime();
+                if(time-prevtime > delay){
+                    prevtime= time;
+                    return func(arg);
+                }
+            }
+        }
+        function fetchData(query){
+            console.log(`processingData:${query}`)
+        }
+        let throttleData = throttle(fetchData,2000);
+        let input = document.getElementById("input");
+        input.addEventListener("keyup",searchData);
+        function searchData(e){
+          let query = e.target.value;
+          throttleData(query)
+        }
+    </script>
+</body>
+</html>

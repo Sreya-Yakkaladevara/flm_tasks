@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            height: 60px;
+            color: white;
+        }
+        .nav h1{
+            margin-top: 5px;
+        }
+        .options{
+            display: flex;
+            align-items: center;
+        }
+        .options li{
+            list-style: none;
+            position: relative;
+            margin-right: 20px;
+        }
+        .options  a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    
+</body>
+</html>
+<script type="module">
+    import Navbar from './component/index.js'
+    let navbar = document.getElementById("container");
+    navbar.innerHTML = Navbar();
+
+</script>
