@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#data{
+    display: grid;
+    grid-template-columns: repeat(4,0.2fr);
+    object-fit: cover;
+  
+}
+#container{
+    display: grid;
+}
+#image{
+    width: 290px;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}

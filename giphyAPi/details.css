@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#gif{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding:50px;
+}
+#image{
+    width: 80%;
+    height: 90vh;
+    object-fit: cover;
+}
