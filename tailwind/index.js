@@ -29,3 +29,5 @@ function hamburgeropen(){
 function hamburgerclose(){
     menu.classList.toggle("hidden")
 }
+let ans = document.querySelectorAll(".ans");
+console.log(ans)
