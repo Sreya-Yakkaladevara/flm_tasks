@@ -25,7 +25,7 @@ const UserCard = () => {
             </div>
         </div>
             <div className='btn'>
-                <button onClick={()=>{setbtn(false)}}>{btn ? "follow" : "following"}</button>
+                <button onClick={()=>{setbtn(!btn)}}>{btn ? "follow" : "following"}</button>
             </div>
     </div>
     <Courses/>

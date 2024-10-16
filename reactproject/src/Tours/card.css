@@ -1,0 +1,27 @@
+.Card{
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+.Carddetails{
+    padding: 2px 0;
+}
+.image img{
+    width: 200px;
+}
+.para{
+    padding: 3px 0;
+    
+}
+.Cardbtn{
+    width:90%;
+    margin: 10px 10px;
+    background-color: white;
+    padding: 5px 15px;
+    outline: none;
+    border-color: green green ;
+    color: green;
+    margin-top: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,11 @@
+.ToursDisplay{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;  
+    justify-content: center;  
+    flex-wrap: wrap;
+    margin: 50px 100px;
+}
+.Title{
+    text-align: center;
+}
