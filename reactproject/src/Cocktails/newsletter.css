@@ -1,0 +1,30 @@
+.newsletterCard{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 90vh;
+
+}
+.detailcard{
+    max-width: fit-content;
+    padding: 20px 60px;
+    box-shadow: 2px 2px 4px grey;
+}
+.detailcard h4{
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-family: arima;
+    font-weight: 400;
+    line-height: 32px;
+}
+.formdetails{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    padding: 2px ;
+    margin-bottom: 2px;
+}
+
+ 

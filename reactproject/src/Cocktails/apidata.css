@@ -1,0 +1,37 @@
+.cardContainer{
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    margin: 20px 70px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.cardheading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    padding: 10px 20px;
+    min-width: 200px;
+    min-height: 300px;
+}
+.cardimg{
+    width: 200px;
+    height: 200px;
+}
+.cardglass{
+    margin-top: 10px;
+}
+.cardglass{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.drinkpage{
+    text-decoration: none;
+    padding: 3px 4px;
+    width: 60px;
+    color: white;
+    border-radius: 2px;
+    background-color: green;
+}

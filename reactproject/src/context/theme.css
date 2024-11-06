@@ -1,0 +1,14 @@
+.dark{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: #f8f5f5;
+    padding: 20px 10px ;
+}
+.bright{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 251, 251);
+    color: #050505;
+    padding: 20px 10px ;
+}

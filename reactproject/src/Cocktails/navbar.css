@@ -1,0 +1,22 @@
+
+.nav{
+    display: flex; 
+    margin: 10px;
+    margin: 20px  90px;
+    justify-content: space-between;
+}
+.heading{
+    color: green;
+}
+.navlink{
+    gap: 20px ;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.navlink:hover{
+    color: green;
+}

@@ -1,0 +1,16 @@
+.CoffeeContainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.CoffeeCard{
+    display: flex;
+    gap: 20px;
+    border: 1px solid black;
+    width: 500px;
+    min-height: 200px;
+}
+.coffeeimg img{
+    width: 200px;
+    height: 100%;
+}
