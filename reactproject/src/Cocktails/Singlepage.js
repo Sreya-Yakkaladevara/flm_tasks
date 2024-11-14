@@ -20,7 +20,9 @@ const Singlepage = () => {
         <Link to='/' className='returnbtn'>Back Home</Link>
         <div className='container'>
         {drinksById.map((item)=>{
-          return <div key={item.idDrink} className='drinkDetail'>
+          return <>
+          <h1 className='name'>{item.strDrink}</h1>
+          <div key={item.idDrink} className='drinkDetail'>
             <div className='drinkimg'>
               <img src={item.strDrinkThumb}/>
             </div>
@@ -32,7 +34,9 @@ const Singlepage = () => {
               <p><span>Instructions : </span>{item.strInstructions}</p>
             </div>
           </div>
+          </>
         })}
+ 
       </div>
     </div>
     
