@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use("/user",userRoute);
 app.use("/employee",employeeRoute)
-app.listen("3040",(req,res)=>{
+app.listen("2030",(req,res)=>{
     mongoose.connect(process.env.Mongourl)
     console.log("severe started");
 })

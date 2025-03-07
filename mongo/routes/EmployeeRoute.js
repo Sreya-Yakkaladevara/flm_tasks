@@ -34,8 +34,7 @@ employeeRoute.patch("/edit/:empId",async(req,res)=>{
     }
 });
 employeeRoute.delete("/delete/:empId",async(req,res)=>{
-    const empId = req.params.empId
-    const payload = req.body
+    const empId = req.params.empId;
     try{
         const data = await employeemodel.findByIdAndDelete({_id:empId});
         res.send(" Data is deleted");

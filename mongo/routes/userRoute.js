@@ -4,10 +4,17 @@ const { userModel } = require('../model/userschema');
 
 //post
 userRoute.post('/create',async(req,res)=>{
+    try{
     const data = new userModel(req.body);
     await data.save();
     res.send("data has been posted");
+    
+}
+catch(error){
+    console.log(error)
+}
 })
+    
 
 // get
 userRoute.get('/',async(req,res)=>{
